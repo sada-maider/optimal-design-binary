@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18610938.svg)](https://doi.org/10.5281/zenodo.18610938)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18611357.svg)](https://doi.org/10.5281/zenodo.18611357)
 # optimal-design-binary
 This repository contains the Python implementation of the algorithms and optimization procedures described in the paper:
 
