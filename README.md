@@ -2,7 +2,9 @@
 This repository contains the Python implementation of the algorithms and optimization procedures described in the paper:
 
 > **Joint Estimation of Target Dose and Slope in Binary Response Models: A Geometric Approach**
+> 
 > *Authors:* Maider Sada¹, José A. Moler¹, and Nancy Flournoy²
+> 
 > *¹Public University of Navarre (UPNA), ²University of Missouri*
 
 ## Overview
