@@ -1,38 +1,23 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18611357.svg)](https://doi.org/10.5281/zenodo.18611357)
-# optimal-design-binary
-This repository contains the Python implementation of the algorithms and optimization procedures described in the paper:
+# Optimal Experimental Design for Binary Response Data
 
-> **Joint Estimation of Target Dose and Slope in Binary Response Models: A Geometric Approach**
-> 
-> *Authors:* Maider Sada¹, José A. Moler¹, and Nancy Flournoy²
-> 
-> *¹Public University of Navarre (UPNA), ²University of Missouri*
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Overview
+This repository contains the official Python implementation and auxiliary code for the Ph.D. thesis: **"Contributions to Experimental Designs for Binary Response Data"** by Maider Sada Allo.
 
-In Phase I clinical trials, estimating both the target dose $\mu_\Gamma$ (associated with a specific toxicity rate $\Gamma$) and the slope $\eta_\Gamma$ of the dose-response curve is critical for safety and efficiency.
+> ⚠️ **Note:** > This repository contains the continuously evolving code for the complete Ph.D. thesis. If you are looking for the exact code used to generate the results for the manuscript **"Joint Estimation of Target Dose and Slope in Binary Response Models: A Geometric Approach"**, please refer to the official archived version via this DOI: **[10.5281/zenodo.18611357](https://doi.org/10.5281/zenodo.18611357)**.
 
-This work generalizes the geometric framework of Sitter and Fainaru (1997) to arbitrary quantiles $\Gamma \in (0,1)$. We demonstrate that for a wide class of optimality criteria, the optimal design is a two-point design symmetric about the median. This characterization significantly reduces the computational complexity from a five-parameter optimization problem to a **single-parameter** problem.
+## 📂 Repository Structure
 
-## Key Features
+The project has been organized following professional software engineering standards to ensure full reproducibility:
 
-* **Generalized Geometric Approach:** Computes optimal designs for any target toxicity rate $\Gamma \in (0,1)$.
-* **Efficiency:** Reduces the optimization search space to a single parameter ($\delta$), enabling fast and precise calculations.
-* **Supported Models:** Logistic and Probit models.
-* **Optimality Criteria:**
-    * **Standardized A-optimality:** Minimizes the sum of variances of the parameter estimates.
-    * **cc-optimality:** Minimizes the variance of the slope estimate given a constraint on the variance of the dose estimate.
-* **Constrained Designs:** Algorithms to compute optimal designs under restricted dose spaces (e.g., dose $\le \Delta$).
+* **`src/`**: The core mathematical engine. Contains the pure Python modules for calculating Fisher Information Matrices (`reparameterization.py`), evaluating optimal designs (`optimal_designs.py`), and computing penalized cost ratios (`minimum_cost.py`).
+* **`tutorials/`**: Interactive Jupyter Notebooks demonstrating how to use the modules. Includes step-by-step examples for unrestricted designs and cost minimization analysis.
+* **`data/`**: Contains pre-calculated `.csv` files (e.g., `D_logistic.csv`, `Eff_mu_logistic.csv`) used to speed up the execution of the restricted algorithmic functions.
 
-## Repository Structure
+## 🚀 Installation
 
-* **`optimal_designs.py`**: Core library containing the model definitions and optimization algorithms.
-* **`Tutorial.ipynb`**: A Jupyter Notebook demonstrating how to use the library. It reproduces **Table 2** (Standardized A-optimal) and **Table 3** (cc-optimal) from the manuscript.
-* **`requirements.txt`**: List of dependencies.
-
-## Installation
-
-To run the code, you need **Python 3** and the following scientific libraries:
+To ensure full reproducibility, you can install all the exact dependencies required to run the code by executing the following command in your terminal:
 
 ```bash
 pip install -r requirements.txt
